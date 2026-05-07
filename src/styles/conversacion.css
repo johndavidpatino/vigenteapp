@@ -1,0 +1,306 @@
+/* ============================================================
+   Conversación en vivo — estilos de pantalla
+   ============================================================ */
+
+.sc-conv-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header (reutiliza home-header) ── */
+.sc-conv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-conv-header .sc-logo {
+  gap: 10px;
+}
+
+.sc-conv-header .sc-logo-name {
+  font-size: 1.35rem;
+}
+
+/* ── Indicador "En conversación en vivo" ── */
+.sc-live-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sc-space-sm) var(--sc-space-md);
+  margin-bottom: var(--sc-space-md);
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-teal);
+  color: var(--sc-white);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.sc-live-dot-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-sm);
+}
+
+.sc-live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
+  animation: sc-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes sc-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.sc-live-timer {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.92;
+}
+
+/* ── Video / foto de la agente ── */
+.sc-conv-video-wrap {
+  position: relative;
+  border-radius: var(--sc-radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--sc-space-md);
+  flex-shrink: 0;
+}
+
+.sc-conv-video-photo {
+  width: 100%;
+  min-height: 230px;
+  background:
+    linear-gradient(175deg, rgba(80, 50, 25, 0) 30%, rgba(30, 18, 8, 0.7) 100%),
+    linear-gradient(145deg, #c8aa88 0%, #a07848 40%, #7a5028 70%, #5a3818 100%);
+  /* reemplazar con <img src="./assets/carolina-video.jpg" alt="Carolina"> */
+}
+
+.sc-conv-video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sc-space-md);
+  color: var(--sc-white);
+}
+
+.sc-conv-video-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.sc-conv-video-status {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+  opacity: 0.88;
+}
+
+/* ── Mensajes del chat ── */
+.sc-chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 82%;
+}
+
+.sc-message--user {
+  align-self: flex-start;
+}
+
+.sc-message--agent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.sc-message-bubble {
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.sc-message--user .sc-message-bubble {
+  background: var(--sc-white);
+  color: var(--sc-text);
+  border: 1px solid var(--sc-border);
+  border-bottom-left-radius: 6px;
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-message--agent .sc-message-bubble {
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+  color: var(--sc-white);
+  border-bottom-right-radius: 6px;
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-message-time {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: var(--sc-text-muted);
+  padding: 0 var(--sc-space-xs);
+}
+
+/* ── Resumen del día (compacto) ── */
+.sc-conv-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-lg);
+}
+
+.sc-conv-summary .sc-card {
+  padding: var(--sc-space-md);
+}
+
+.sc-conv-summary .sc-weather-temp {
+  font-size: 1.8rem;
+  margin: 4px 0;
+}
+
+.sc-conv-summary .sc-recommendation-card p {
+  font-size: 0.82rem;
+}
+
+/* ── Barra de micrófono ── */
+.sc-mic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sc-space-sm);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-mic-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sc-space-lg);
+  width: 100%;
+}
+
+/* Ondas de audio */
+.sc-waveform {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.sc-waveform--left  { justify-content: flex-end; }
+.sc-waveform--right { justify-content: flex-start; }
+
+.sc-waveform span {
+  display: block;
+  width: 3px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-teal);
+  opacity: 0.7;
+}
+
+.sc-waveform span:nth-child(1) { height: 10px; }
+.sc-waveform span:nth-child(2) { height: 22px; }
+.sc-waveform span:nth-child(3) { height: 34px; }
+.sc-waveform span:nth-child(4) { height: 18px; }
+.sc-waveform span:nth-child(5) { height: 28px; }
+.sc-waveform span:nth-child(6) { height: 12px; }
+
+/* Botón de micrófono */
+.sc-mic-button {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--sc-radius-pill);
+  border: 0;
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+  color: var(--sc-white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(0, 125, 122, 0.38);
+  flex-shrink: 0;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.sc-mic-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 12px rgba(0, 125, 122, 0.3);
+}
+
+.sc-mic-hint {
+  font-size: 0.8rem;
+  color: var(--sc-text-muted);
+  text-align: center;
+}
+
+/* ── Chips de tema ── */
+.sc-topics-section {
+  margin-bottom: var(--sc-space-lg);
+}
+
+.sc-topics-label {
+  margin: 0 0 var(--sc-space-sm);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--sc-navy);
+}
+
+.sc-topic-chips {
+  display: flex;
+  gap: var(--sc-space-sm);
+  flex-wrap: wrap;
+}
+
+.sc-topic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sc-space-xs);
+  padding: var(--sc-space-xs) var(--sc-space-md);
+  border-radius: var(--sc-radius-pill);
+  border: 1.5px solid var(--sc-border-strong);
+  background: var(--sc-white);
+  color: var(--sc-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-topic-chip svg {
+  color: var(--sc-teal);
+  flex-shrink: 0;
+}
+
+/* ── Pie de pantalla ── */
+.sc-conv-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sc-space-sm);
+  padding: var(--sc-space-md) 0 var(--sc-space-xl);
+  border-top: 1px solid var(--sc-border);
+  font-size: 0.88rem;
+  color: var(--sc-text-muted);
+  font-weight: 600;
+}

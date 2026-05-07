@@ -1,0 +1,264 @@
+/* ============================================================
+   Historias y cultura — estilos de pantalla
+   ============================================================ */
+
+.sc-hist-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+}
+
+.sc-hist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-lg);
+}
+.sc-hist-header .sc-logo      { gap: 10px; }
+.sc-hist-header .sc-logo-name { font-size: 1.35rem; }
+
+/* ── Título con ícono ── */
+.sc-hist-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-sm);
+  margin-bottom: 4px;
+}
+
+.sc-hist-title-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.sc-hist-title {
+  margin: 0;
+  font-size: clamp(1.7rem, 7vw, 2.2rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.sc-hist-subtitle {
+  margin: 0 0 var(--sc-space-xl);
+  font-size: 0.9rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}
+
+/* ── Artículo destacado ── */
+.sc-featured-article {
+  border-radius: var(--sc-radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--sc-space-xl);
+  box-shadow: var(--sc-shadow);
+  position: relative;
+}
+
+.sc-featured-photo {
+  width: 100%;
+  height: 180px;
+  background:
+    linear-gradient(180deg, rgba(30,15,5,0) 30%, rgba(10,5,2,.75) 100%),
+    linear-gradient(145deg, #8a7060 0%, #6a5040 40%, #4a3020 100%);
+  /* reemplazar con <img src="./assets/bogota-antano.jpg" alt="Crónicas de Bogotá de antaño"> */
+}
+
+.sc-featured-badge {
+  position: absolute;
+  top: var(--sc-space-md);
+  left: var(--sc-space-md);
+  padding: 4px 10px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-coral);
+  color: var(--sc-white);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.sc-featured-body {
+  padding: var(--sc-space-md);
+  background: var(--sc-white);
+}
+
+.sc-featured-body h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.2;
+}
+
+.sc-featured-body p {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 0.85rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}
+
+.sc-media-buttons {
+  display: flex;
+  gap: var(--sc-space-sm);
+}
+
+.sc-media-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px var(--sc-space-md);
+  border-radius: var(--sc-radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0;
+}
+
+.sc-media-btn--read {
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+  color: var(--sc-white);
+}
+
+.sc-media-btn--listen {
+  background: var(--sc-white);
+  color: var(--sc-navy);
+  border: 1.5px solid var(--sc-border-strong);
+}
+
+/* ── Lista de contenidos ── */
+.sc-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sc-space-sm);
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-content-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  border: 1px solid var(--sc-border);
+  background: var(--sc-white);
+  box-shadow: var(--sc-shadow-soft);
+  text-decoration: none;
+  color: var(--sc-text);
+}
+
+.sc-content-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--sc-radius-sm);
+  background: linear-gradient(135deg, var(--sc-mint), var(--sc-blue-soft));
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.sc-content-info { flex: 1; min-width: 0; }
+
+.sc-content-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  margin: 0 0 2px;
+  line-height: 1.2;
+}
+
+.sc-content-desc {
+  font-size: 0.75rem;
+  color: var(--sc-text-soft);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.sc-content-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-xs);
+}
+
+.sc-content-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--sc-teal-dark);
+  background: var(--sc-mint);
+  padding: 2px 7px;
+  border-radius: var(--sc-radius-pill);
+}
+
+.sc-content-duration {
+  font-size: 0.68rem;
+  color: var(--sc-text-muted);
+}
+
+.sc-save-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--sc-radius-pill);
+  border: 1.5px solid var(--sc-border);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  color: var(--sc-text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.sc-save-btn:hover { color: var(--sc-coral); border-color: var(--sc-coral); }
+
+/* ── Carolina recomienda ── */
+.sc-recommends-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-lg);
+  border-radius: var(--sc-radius-lg);
+  background: linear-gradient(135deg, var(--sc-peach), var(--sc-white));
+  border: 1px solid var(--sc-border);
+  margin-bottom: var(--sc-space-xl);
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-recommends-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--sc-radius-pill);
+  background: linear-gradient(145deg, #c8a888 0%, #a07848 100%);
+  flex-shrink: 0;
+  /* reemplazar con <img src="./assets/carolina-thumb.jpg" alt="Carolina"> */
+}
+
+.sc-recommends-body strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--sc-coral);
+  margin-bottom: 4px;
+}
+
+.sc-recommends-body p {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 0.88rem;
+  color: var(--sc-text);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* ── Pie cultural ── */
+.sc-hist-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-sm);
+  padding: var(--sc-space-md) 0 var(--sc-space-xl);
+  font-size: 0.8rem;
+  color: var(--sc-text-muted);
+  border-top: 1px solid var(--sc-border);
+  margin-top: var(--sc-space-sm);
+}

@@ -1,0 +1,206 @@
+/* ============================================================
+   Home / Pantalla de inicio — estilos de pantalla
+   ============================================================ */
+
+.sc-home-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+}
+
+/* ── Header ── */
+.sc-home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-home-header .sc-logo {
+  gap: 10px;
+}
+
+.sc-home-header .sc-logo-name {
+  font-size: 1.35rem;
+}
+
+/* ── Saludo ── */
+.sc-home-greeting {
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-greeting-title {
+  margin: 0 0 var(--sc-space-xs);
+  font-size: clamp(1.9rem, 7vw, 2.6rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-sm);
+}
+
+.sc-greeting-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* ── Tarjeta hero del agente ── */
+.sc-hero-agent {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  gap: var(--sc-space-md);
+  margin-top: var(--sc-space-lg);
+  padding: var(--sc-space-md);
+}
+
+.sc-hero-agent h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.3;
+}
+
+.sc-hero-agent p {
+  margin: 4px 0 var(--sc-space-sm);
+  font-size: 0.88rem;
+  color: var(--sc-text-soft);
+  line-height: 1.35;
+}
+
+.sc-hero-photo-sm {
+  width: 86px;
+  height: 86px;
+  border-radius: var(--sc-radius-md);
+  background: linear-gradient(155deg, #c8a888 0%, #a07848 55%, #7a5028 100%);
+  /* reemplazar con <img src="./assets/carolina.jpg" alt="Carolina"> */
+}
+
+/* ── Secciones ── */
+.sc-home-section {
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-home-section-title {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.15;
+}
+
+/* ── Resumen del día ── */
+.sc-day-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-weather-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sc-weather-card strong {
+  font-size: 0.88rem;
+  color: var(--sc-navy);
+}
+
+.sc-weather-temp {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-xs);
+  font-size: 2.4rem;
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1;
+  margin: var(--sc-space-xs) 0;
+}
+
+.sc-recommendation-card strong {
+  font-size: 0.88rem;
+  color: var(--sc-coral);
+  display: block;
+  margin-bottom: var(--sc-space-xs);
+}
+
+.sc-recommendation-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--sc-text);
+  line-height: 1.4;
+}
+
+/* ── Recordatorio ── */
+.sc-reminder {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-mint);
+  border: 1px solid var(--sc-border);
+}
+
+.sc-reminder-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.sc-reminder-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--sc-navy);
+}
+
+.sc-reminder-text span {
+  font-size: 0.85rem;
+  color: var(--sc-text-soft);
+}
+
+/* ── Navegación inferior ── */
+.sc-bottom-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  margin: var(--sc-space-xl) calc(var(--sc-space-md) * -1) 0;
+  padding: 10px 6px 20px;
+  border-radius: var(--sc-radius-lg) var(--sc-radius-lg) 0 0;
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+}
+
+.sc-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 4px;
+  border-radius: var(--sc-radius-sm);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.sc-nav-item.active {
+  color: var(--sc-white);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.sc-nav-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}

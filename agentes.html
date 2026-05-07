@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigente App — Elige tu compañero</title>
+  <link rel="stylesheet" href="./src/styles/components.css" />
+  <link rel="stylesheet" href="./src/styles/agentes.css" />
+</head>
+<body>
+  <main class="sc-agents-page" aria-label="Selección de agente">
+
+    <!-- Header -->
+    <header class="sc-agents-header">
+      <a class="sc-icon-button" href="login.html" aria-label="Volver">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+      </a>
+
+      <a class="sc-logo" href="#" aria-label="Senior Connexion, compañía que te entiende">
+        <svg class="sc-logo-icon" width="40" height="40" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+          <circle cx="18" cy="15" r="6.5" fill="#007d7a"/>
+          <circle cx="34" cy="15" r="6.5" fill="#007d7a"/>
+          <path d="M7 27C7 20 15.5 16 26 23.5C36.5 16 45 20 45 27C45 36.5 26 47 26 47C26 47 7 36.5 7 27Z" fill="#007d7a"/>
+        </svg>
+        <div>
+          <span class="sc-logo-name">Senior<br>Connexion</span>
+          <small class="sc-logo-tagline">Compañía que te entiende ❤</small>
+        </div>
+      </a>
+
+      <a class="sc-profile-btn" href="#" aria-label="Mi perfil">
+        <span class="sc-profile-avatar" aria-hidden="true">👤</span>
+        <span class="sc-profile-label">Mi perfil</span>
+      </a>
+    </header>
+
+    <!-- Título -->
+    <section class="sc-agents-intro" aria-labelledby="agents-title">
+      <h1 id="agents-title" class="sc-title">Elige quién te<br>acompaña hoy</h1>
+      <p class="sc-subtitle">Cada persona tiene su estilo único.<br>Elige con quien te sientas más cómodo.</p>
+    </section>
+
+    <!-- Lista de agentes -->
+    <div class="sc-agent-list" role="radiogroup" aria-label="Selecciona un agente">
+
+      <!-- Carolina — seleccionada -->
+      <article class="sc-card sc-card-mint sc-agent-card sc-agent-card--pick is-selected"
+               role="radio" aria-checked="true" tabindex="0">
+        <div class="sc-agent-photo-wrap sc-agent-photo-wrap--carolina" aria-hidden="true">
+          <!--
+            Reemplazar con:
+            <img src="./assets/carolina.jpg" alt="Carolina">
+          -->
+        </div>
+        <div class="sc-agent-info">
+          <h2 class="sc-agent-card-name">Carolina</h2>
+          <span class="sc-agent-role">Compañera cercana</span>
+          <p class="sc-agent-desc">Empática, paciente y confiable. Te escucha y te acompaña en tu día a día.</p>
+        </div>
+        <span class="sc-check" aria-hidden="true">✓</span>
+      </article>
+
+      <!-- Javier -->
+      <article class="sc-card sc-agent-card sc-agent-card--pick"
+               role="radio" aria-checked="false" tabindex="0">
+        <div class="sc-agent-photo-wrap sc-agent-photo-wrap--javier" aria-hidden="true">
+          <!--
+            Reemplazar con:
+            <img src="./assets/javier.jpg" alt="Javier">
+          -->
+        </div>
+        <div class="sc-agent-info">
+          <h2 class="sc-agent-card-name">Javier</h2>
+          <span class="sc-agent-role">Conversador y cultural</span>
+          <p class="sc-agent-desc">Amante de las buenas charlas, la historia y la cultura. Ideal para conversar y aprender juntos.</p>
+        </div>
+        <span class="sc-radio" aria-hidden="true"></span>
+      </article>
+
+      <!-- Lucía -->
+      <article class="sc-card sc-agent-card sc-agent-card--pick"
+               role="radio" aria-checked="false" tabindex="0">
+        <div class="sc-agent-photo-wrap sc-agent-photo-wrap--lucia" aria-hidden="true">
+          <!--
+            Reemplazar con:
+            <img src="./assets/lucia.jpg" alt="Lucía">
+          -->
+        </div>
+        <div class="sc-agent-info">
+          <h2 class="sc-agent-card-name">Lucía</h2>
+          <span class="sc-agent-role">Relajación y meditación</span>
+          <p class="sc-agent-desc">Serena y atenta. Tu guía para relajarte, respirar y encontrar tranquilidad.</p>
+        </div>
+        <span class="sc-radio" aria-hidden="true"></span>
+      </article>
+
+    </div>
+
+    <!-- Barra inferior: privacidad + CTA -->
+    <div class="sc-agents-bottom">
+      <p class="sc-privacy-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        Tu privacidad y bienestar son nuestra prioridad
+      </p>
+      <button class="sc-button sc-button-primary sc-button-block" type="button">
+        Continuar
+      </button>
+    </div>
+
+  </main>
+</body>
+</html>
