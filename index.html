@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigente App - Senior Connexion UI Prototype</title>
+  <link rel="stylesheet" href="./src/styles/components.css" />
+</head>
+<body>
+  <main class="sc-page-shell" aria-label="Prototipo de inicio de Vigente App">
+    <header class="sc-header">
+      <button class="sc-icon-button" aria-label="Abrir menú">☰</button>
+
+      <a class="sc-logo" href="#" aria-label="Senior Connexion, compañía que te entiende">
+        <span class="sc-logo-mark" aria-hidden="true">❤</span>
+        <span>
+          <span class="sc-logo-name">Senior<br />Connexion</span>
+          <small class="sc-logo-tagline">Compañía que te entiende ❤</small>
+        </span>
+      </a>
+
+      <button class="sc-icon-button" aria-label="Abrir mi perfil">👤</button>
+    </header>
+
+    <section class="sc-section" aria-labelledby="home-title">
+      <h1 id="home-title" class="sc-title">Buenos días, John</h1>
+      <p class="sc-subtitle">Estamos aquí para acompañarte cada día.</p>
+
+      <article class="sc-card sc-card-mint sc-hero-agent">
+        <div class="sc-agent-photo-placeholder" aria-hidden="true">👩</div>
+        <div>
+          <h2>Carolina está disponible ahora</h2>
+          <p>Tu compañera de confianza. Conversemos cuando quieras.</p>
+          <p style="display:none">Placeholder intentionally hidden. Avoid inline styles in production components.</p>
+          <button class="sc-button sc-button-primary" type="button">Conversar ahora</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="sc-section" aria-labelledby="actions-title">
+      <h2 id="actions-title" class="sc-section-title">¿Qué te gustaría hacer hoy?</h2>
+      <div class="sc-feature-grid">
+        <a class="sc-feature-card sc-card-mint" href="#conversation">
+          <span class="sc-feature-icon" aria-hidden="true">💬</span>
+          <strong>Conversar ahora</strong>
+          <small>Habla con Carolina en vivo</small>
+        </a>
+
+        <a class="sc-feature-card sc-card-blue" href="#memory-game">
+          <span class="sc-feature-icon" aria-hidden="true">🧠</span>
+          <strong>Juegos cognitivos</strong>
+          <small>Ejercita tu mente de forma divertida</small>
+        </a>
+
+        <a class="sc-feature-card sc-card-peach" href="#workshops">
+          <span class="sc-feature-icon" aria-hidden="true">🎓</span>
+          <strong>Talleres y cursos</strong>
+          <small>Aprende cosas nuevas cada día</small>
+        </a>
+
+        <a class="sc-feature-card sc-card-lavender" href="#culture">
+          <span class="sc-feature-icon" aria-hidden="true">📖</span>
+          <strong>Historias y cultura</strong>
+          <small>Lee, escucha y comparte recuerdos</small>
+        </a>
+
+        <a class="sc-feature-card sc-card-mint" href="#wellbeing">
+          <span class="sc-feature-icon" aria-hidden="true">🪷</span>
+          <strong>Meditación guiada</strong>
+          <small>Relájate y cuida tu bienestar</small>
+        </a>
+
+        <a class="sc-feature-card sc-card-peach" href="#support">
+          <span class="sc-feature-icon" aria-hidden="true">🤝</span>
+          <strong>Ayuda y apoyo</strong>
+          <small>Recursos y orientación cuando lo necesites</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="sc-section" aria-labelledby="summary-title">
+      <h2 id="summary-title" class="sc-section-title">Tu resumen del día</h2>
+      <div class="sc-info-row">
+        <article class="sc-card sc-weather-card">
+          <strong>Clima en Bogotá</strong>
+          <div class="sc-weather-temp"><span aria-hidden="true">🌤️</span>18°</div>
+          <p class="sc-muted">Parcialmente nublado<br />Máx. 20° · Mín. 10°</p>
+        </article>
+
+        <article class="sc-card sc-card-peach sc-recommendation-card">
+          <strong class="sc-text-coral">Recomendación del día</strong>
+          <p>Camina al aire libre 15 minutos y disfruta del sol de la mañana.</p>
+        </article>
+      </div>
+
+      <div class="sc-reminder" role="note">
+        <span aria-hidden="true">🔔</span>
+        <div>
+          <strong>Recordatorio</strong><br />
+          Tienes taller de Memoria activa hoy a las 11:00 a. m.
+        </div>
+      </div>
+    </section>
+
+    <nav class="sc-bottom-nav" aria-label="Navegación principal">
+      <a class="sc-nav-item active" href="#home"><span class="sc-nav-icon">⌂</span><span>Inicio</span></a>
+      <a class="sc-nav-item" href="#conversation"><span class="sc-nav-icon">💬</span><span>Conversar</span></a>
+      <a class="sc-nav-item" href="#activities"><span class="sc-nav-icon">🧩</span><span>Actividades</span></a>
+      <a class="sc-nav-item" href="#agenda"><span class="sc-nav-icon">📅</span><span>Agenda</span></a>
+      <a class="sc-nav-item" href="#contacts"><span class="sc-nav-icon">☎</span><span>Contactos</span></a>
+    </nav>
+  </main>
+</body>
+</html>
