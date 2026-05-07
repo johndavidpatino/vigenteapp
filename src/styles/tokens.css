@@ -1,0 +1,47 @@
+:root {
+  /* Senior Connexion / Vigente App design tokens */
+  --sc-teal: #007d7a;
+  --sc-teal-dark: #005f63;
+  --sc-navy: #0b3558;
+  --sc-coral: #f26b55;
+  --sc-cream: #fff9ef;
+  --sc-white: #ffffff;
+  --sc-mint: #eaf7f4;
+  --sc-blue-soft: #eef7ff;
+  --sc-peach: #fff1e6;
+  --sc-lavender: #f3eeff;
+  --sc-yellow-soft: #fff6d8;
+  --sc-green-soft: #e9f7e9;
+
+  --sc-text: #14324a;
+  --sc-text-soft: #516575;
+  --sc-text-muted: #708191;
+
+  --sc-border: rgba(10, 80, 90, 0.14);
+  --sc-border-strong: rgba(10, 80, 90, 0.24);
+  --sc-shadow: 0 12px 28px rgba(18, 52, 72, 0.1);
+  --sc-shadow-soft: 0 8px 18px rgba(18, 52, 72, 0.08);
+
+  --sc-radius-sm: 14px;
+  --sc-radius-md: 22px;
+  --sc-radius-lg: 30px;
+  --sc-radius-xl: 38px;
+  --sc-radius-pill: 999px;
+
+  --sc-space-2xs: 4px;
+  --sc-space-xs: 6px;
+  --sc-space-sm: 10px;
+  --sc-space-md: 16px;
+  --sc-space-lg: 24px;
+  --sc-space-xl: 34px;
+  --sc-space-2xl: 48px;
+
+  --sc-font: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --sc-title: clamp(2rem, 7vw, 3rem);
+  --sc-subtitle: clamp(1.25rem, 4vw, 1.65rem);
+  --sc-body: 1.08rem;
+  --sc-small: 0.92rem;
+
+  --sc-touch: 56px;
+  --sc-content-max: 460px;
+}
