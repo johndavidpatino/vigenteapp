@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigente App — Conversando con Carolina</title>
+  <link rel="stylesheet" href="./src/styles/components.css" />
+  <link rel="stylesheet" href="./src/styles/conversacion.css" />
+</head>
+<body>
+  <main class="sc-conv-page" aria-label="Conversación en vivo con Carolina">
+
+    <!-- Header -->
+    <header class="sc-conv-header">
+      <button class="sc-icon-button" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <a class="sc-logo" href="home.html" aria-label="Senior Connexion, compañía que te entiende">
+        <svg class="sc-logo-icon" width="40" height="40" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+          <circle cx="18" cy="15" r="6.5" fill="#007d7a"/>
+          <circle cx="34" cy="15" r="6.5" fill="#007d7a"/>
+          <path d="M7 27C7 20 15.5 16 26 23.5C36.5 16 45 20 45 27C45 36.5 26 47 26 47C26 47 7 36.5 7 27Z" fill="#007d7a"/>
+        </svg>
+        <div>
+          <span class="sc-logo-name">Senior<br>Connexion</span>
+          <small class="sc-logo-tagline">Compañía que te entiende ❤</small>
+        </div>
+      </a>
+
+      <a class="sc-profile-btn" href="#" aria-label="Mi perfil">
+        <span class="sc-profile-avatar" aria-hidden="true">👤</span>
+        <span class="sc-profile-label">Mi perfil</span>
+      </a>
+    </header>
+
+    <!-- Indicador de sesión en vivo -->
+    <div class="sc-live-badge" role="status" aria-live="polite">
+      <span class="sc-live-dot-wrap">
+        <span class="sc-live-dot" aria-hidden="true"></span>
+        En conversación en vivo
+      </span>
+      <span class="sc-live-timer" aria-label="Duración 8 minutos 24 segundos">08:24</span>
+    </div>
+
+    <!-- Video / foto de Carolina -->
+    <div class="sc-conv-video-wrap" aria-label="Video de Carolina">
+      <div class="sc-conv-video-photo" aria-hidden="true">
+        <!--
+          Reemplazar con:
+          <img src="./assets/carolina-video.jpg" alt="Carolina durante la conversación">
+          O con un elemento <video> cuando se integre la llamada en vivo.
+        -->
+      </div>
+      <div class="sc-conv-video-overlay" aria-hidden="true">
+        <p class="sc-conv-video-name">Carolina, tu compañera</p>
+        <p class="sc-conv-video-status">Estoy aquí para escucharte.</p>
+      </div>
+    </div>
+
+    <!-- Mensajes del chat -->
+    <section class="sc-chat-messages" aria-label="Historial de la conversación">
+
+      <!-- Mensaje del usuario (John) -->
+      <div class="sc-message sc-message--user">
+        <div class="sc-message-bubble">
+          ¡Hola, qué gusto verte!<br>¿Cómo estás hoy?
+        </div>
+        <span class="sc-message-time">9:41 a. m.</span>
+      </div>
+
+      <!-- Respuesta de Carolina -->
+      <div class="sc-message sc-message--agent">
+        <div class="sc-message-bubble">
+          Muy bien, gracias.<br>Un poco mejor cada día.
+        </div>
+        <span class="sc-message-time">9:43 a. m.</span>
+      </div>
+
+    </section>
+
+    <!-- Resumen del día (compacto) -->
+    <div class="sc-conv-summary" aria-label="Tu resumen del día">
+
+      <article class="sc-card sc-weather-card" aria-label="Clima en Bogotá">
+        <strong>Clima en Bogotá</strong>
+        <div class="sc-weather-temp">
+          <span aria-hidden="true">🌤️</span>18°
+        </div>
+        <p class="sc-muted" style="margin:0;font-size:.78rem;line-height:1.4">
+          Parcialmente nublado<br>Máx. 20° · Mín. 10°
+        </p>
+      </article>
+
+      <article class="sc-card sc-card-peach sc-recommendation-card">
+        <strong>Recomendación del día</strong>
+        <p>Sal a caminar unos minutos y disfruta del aire fresco. Tu cuerpo y tu mente te lo agradecerán 🌿</p>
+      </article>
+
+    </div>
+
+    <!-- Barra de micrófono -->
+    <div class="sc-mic-section">
+      <div class="sc-mic-controls" role="group" aria-label="Controles de voz">
+
+        <!-- Onda izquierda -->
+        <div class="sc-waveform sc-waveform--left" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Botón micrófono -->
+        <button class="sc-mic-button" type="button" aria-label="Toca para hablar">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+               stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8"  y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
+
+        <!-- Onda derecha -->
+        <div class="sc-waveform sc-waveform--right" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+      </div>
+      <p class="sc-mic-hint">Toca para hablar · Te escucho...</p>
+    </div>
+
+    <!-- Chips de tema para la conversación -->
+    <div class="sc-topics-section" aria-label="Sugerencias de temas">
+      <p class="sc-topics-label">Conversar sobre...</p>
+      <div class="sc-topic-chips">
+
+        <button class="sc-topic-chip" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+          ¿Cómo va tu día?
+        </button>
+
+        <button class="sc-topic-chip" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          ¿Cómo está tu familia?
+        </button>
+
+        <button class="sc-topic-chip" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          Cuéntame una historia
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Pie de pantalla -->
+    <footer class="sc-conv-footer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+      Aquí siempre tienes a alguien que te escucha
+    </footer>
+
+  </main>
+</body>
+</html>

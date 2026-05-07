@@ -1,0 +1,147 @@
+/* ============================================================
+   Login / Bienvenida — estilos de pantalla
+   ============================================================ */
+
+.sc-login-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--sc-cream);
+}
+
+/* ── Header (logo centrado) ── */
+.sc-login-header {
+  display: flex;
+  justify-content: center;
+  padding: var(--sc-space-xl) var(--sc-space-md) var(--sc-space-lg);
+}
+
+.sc-login-header .sc-logo {
+  gap: var(--sc-space-md);
+}
+
+.sc-logo-icon {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0, 125, 122, 0.24));
+}
+
+/* ── Hero (foto de la agente) ── */
+.sc-login-hero {
+  margin: 0 var(--sc-space-md);
+  border-radius: var(--sc-radius-xl);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sc-hero-photo {
+  position: relative;
+  min-height: 272px;
+  /* placeholder cálido — reemplazar con <img> cuando haya foto real */
+  background:
+    linear-gradient(175deg, rgba(100, 68, 38, 0) 0%, rgba(60, 38, 18, 0.55) 100%),
+    linear-gradient(145deg, #c8aa8a 0%, #b08060 35%, #8a6040 65%, #6a4020 100%);
+}
+
+.sc-speech-bubble {
+  position: absolute;
+  bottom: var(--sc-space-lg);
+  left: var(--sc-space-md);
+  right: var(--sc-space-md);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: var(--sc-radius-md);
+  padding: var(--sc-space-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sc-space-sm);
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-speech-bubble p {
+  margin: 0;
+  font-size: var(--sc-small);
+  color: var(--sc-text);
+  line-height: 1.4;
+}
+
+/* ── Cuerpo: título, subtítulo y botones ── */
+.sc-login-body {
+  flex: 1;
+  padding: var(--sc-space-xl) var(--sc-space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-login-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 10vw, 3.4rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.sc-login-subtitle {
+  margin: var(--sc-space-sm) 0 0;
+  font-size: 1.1rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}
+
+.sc-login-heart {
+  display: block;
+  margin-top: var(--sc-space-md);
+  font-size: 1.5rem;
+  color: var(--sc-coral);
+}
+
+.sc-login-actions {
+  margin-top: var(--sc-space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sc-space-md);
+}
+
+/* Modificadores de botón para esta pantalla */
+.sc-button-block {
+  width: 100%;
+  font-size: 1.08rem;
+}
+
+.sc-button-outline {
+  color: var(--sc-navy);
+  background: transparent;
+  border: 2px solid var(--sc-border-strong);
+}
+
+.sc-help-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sc-space-xs);
+  padding: var(--sc-space-sm);
+  color: var(--sc-text-muted);
+  font-size: var(--sc-small);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ── Pie: señal de confianza ── */
+.sc-login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-lg);
+  border-top: 1px solid var(--sc-border);
+}
+
+.sc-login-footer p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--sc-text-muted);
+  line-height: 1.4;
+}

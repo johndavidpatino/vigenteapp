@@ -1,0 +1,312 @@
+/* ============================================================
+   Talleres y cursos — estilos de pantalla
+   ============================================================ */
+
+.sc-tall-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+}
+
+.sc-tall-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-lg);
+}
+.sc-tall-header .sc-logo      { gap: 10px; }
+.sc-tall-header .sc-logo-name { font-size: 1.35rem; }
+
+/* ── Título ── */
+.sc-tall-title {
+  margin: 0 0 4px;
+  font-size: clamp(1.7rem, 7vw, 2.2rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.sc-tall-subtitle {
+  margin: 0 0 var(--sc-space-xl);
+  font-size: 0.9rem;
+  color: var(--sc-text-soft);
+}
+
+/* ── Taller destacado (hero card) ── */
+.sc-taller-hero {
+  position: relative;
+  border-radius: var(--sc-radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--sc-space-xl);
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-taller-hero-photo {
+  width: 100%;
+  height: 160px;
+  background:
+    linear-gradient(175deg, rgba(30,15,5,0) 20%, rgba(10,5,2,.6) 100%),
+    linear-gradient(145deg, #c8a888 0%, #8a6848 50%, #5a3820 100%);
+  /* reemplazar con <img src="./assets/taller-memoria.jpg" alt="Taller de memoria creativa"> */
+}
+
+.sc-taller-hero-badge {
+  position: absolute;
+  top: var(--sc-space-md);
+  left: var(--sc-space-md);
+  padding: 4px 12px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-coral);
+  color: var(--sc-white);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.sc-taller-hero-body {
+  padding: var(--sc-space-lg);
+  background: var(--sc-white);
+}
+
+.sc-taller-hero-body h2 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.2;
+}
+
+.sc-taller-hero-body p {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 0.85rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}
+
+.sc-taller-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-taller-meta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-xs);
+  font-size: 0.8rem;
+  color: var(--sc-text-soft);
+}
+
+.sc-taller-meta-row svg { color: var(--sc-teal); flex-shrink: 0; }
+
+/* ── Grid de talleres (2 columnas) ── */
+.sc-taller-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-taller-card {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  background: var(--sc-white);
+  overflow: hidden;
+  box-shadow: var(--sc-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--sc-text);
+  transition: box-shadow 0.15s;
+}
+
+.sc-taller-card:hover { box-shadow: var(--sc-shadow); }
+
+.sc-taller-card-photo {
+  height: 80px;
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+}
+
+.sc-taller-card-photo--paint    { background: linear-gradient(135deg, var(--sc-peach), #fde8d8); }
+.sc-taller-card-photo--historia { background: linear-gradient(135deg, var(--sc-lavender), #e8e0f8); }
+.sc-taller-card-photo--tech     { background: linear-gradient(135deg, var(--sc-blue-soft), #d8eeff); }
+.sc-taller-card-photo--music    { background: linear-gradient(135deg, var(--sc-mint), #d4f0e8); }
+
+.sc-taller-card-body {
+  padding: var(--sc-space-md) var(--sc-space-sm);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sc-taller-card-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.sc-taller-card-date {
+  font-size: 0.72rem;
+  color: var(--sc-text-soft);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.sc-taller-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--sc-space-xs);
+}
+
+.sc-taller-spot-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--sc-teal-dark);
+  background: var(--sc-mint);
+  padding: 2px 7px;
+  border-radius: var(--sc-radius-pill);
+}
+
+.sc-taller-mode-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--sc-text-muted);
+  background: var(--sc-yellow-soft);
+  padding: 2px 7px;
+  border-radius: var(--sc-radius-pill);
+}
+
+.sc-taller-card-btn {
+  width: 100%;
+  margin-top: var(--sc-space-sm);
+  padding: 7px;
+  border-radius: var(--sc-radius-pill);
+  border: 1.5px solid var(--sc-teal);
+  background: transparent;
+  color: var(--sc-teal-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ── Mini calendario ── */
+.sc-mini-cal {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  background: var(--sc-white);
+  padding: var(--sc-space-md);
+  margin-bottom: var(--sc-space-xl);
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-mini-cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-mini-cal-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+}
+
+.sc-mini-cal-nav {
+  display: flex;
+  gap: var(--sc-space-xs);
+}
+
+.sc-mini-cal-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--sc-radius-pill);
+  border: 1px solid var(--sc-border);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--sc-navy);
+}
+
+.sc-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+  text-align: center;
+}
+
+.sc-cal-day-name {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--sc-text-muted);
+  padding: 4px 0;
+}
+
+.sc-cal-day {
+  font-size: 0.72rem;
+  padding: 5px 2px;
+  border-radius: var(--sc-radius-sm);
+  color: var(--sc-text);
+  cursor: pointer;
+}
+
+.sc-cal-day--empty        { color: transparent; }
+.sc-cal-day--other-month  { color: var(--sc-border-strong); }
+.sc-cal-day--has-event    { font-weight: 800; color: var(--sc-teal-dark); background: var(--sc-mint); }
+.sc-cal-day--today        { background: var(--sc-teal); color: var(--sc-white); font-weight: 800; }
+
+/* ── Recomendación de Carolina ── */
+.sc-tall-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-lg);
+  border-radius: var(--sc-radius-lg);
+  background: linear-gradient(135deg, var(--sc-mint), var(--sc-white));
+  border: 1px solid var(--sc-border);
+  margin-bottom: var(--sc-space-xl);
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-tall-quote-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--sc-radius-pill);
+  background: linear-gradient(145deg, #c8a888 0%, #a07848 100%);
+  flex-shrink: 0;
+}
+
+.sc-tall-quote-body strong {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--sc-teal-dark);
+  margin-bottom: 4px;
+}
+
+.sc-tall-quote-body p {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 0.85rem;
+  color: var(--sc-text);
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.sc-tall-quote-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--sc-teal);
+  text-decoration: none;
+}

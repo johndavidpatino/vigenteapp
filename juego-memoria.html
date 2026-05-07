@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigente App — Memoria activa</title>
+  <link rel="stylesheet" href="./src/styles/components.css" />
+  <link rel="stylesheet" href="./src/styles/juego-memoria.css" />
+</head>
+<body>
+  <main class="sc-game-page" aria-label="Juego cognitivo: Memoria activa">
+
+    <!-- Header con botón volver -->
+    <header class="sc-game-header">
+      <a class="sc-icon-button" href="actividades.html" aria-label="Volver a Actividades">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+      </a>
+      <a class="sc-logo" href="home.html" aria-label="Senior Connexion">
+        <svg class="sc-logo-icon" width="40" height="40" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+          <circle cx="18" cy="15" r="6.5" fill="#007d7a"/><circle cx="34" cy="15" r="6.5" fill="#007d7a"/>
+          <path d="M7 27C7 20 15.5 16 26 23.5C36.5 16 45 20 45 27C45 36.5 26 47 26 47C26 47 7 36.5 7 27Z" fill="#007d7a"/>
+        </svg>
+        <div>
+          <span class="sc-logo-name">Senior<br>Connexion</span>
+          <small class="sc-logo-tagline">Compañía que te entiende ❤</small>
+        </div>
+      </a>
+      <a class="sc-profile-btn" href="#" aria-label="Mi perfil">
+        <span class="sc-profile-avatar" aria-hidden="true">👤</span>
+        <span class="sc-profile-label">Mi perfil</span>
+      </a>
+    </header>
+
+    <!-- Título -->
+    <h1 class="sc-game-title">Juego cognitivo: Memoria activa</h1>
+    <p class="sc-game-subtitle">Encuentra las parejas y ejercita tu memoria</p>
+
+    <!-- Estadísticas -->
+    <div class="sc-game-stats" role="status" aria-label="Estado del juego">
+      <div class="sc-stat">
+        <span class="sc-stat-icon" aria-hidden="true">🃏</span>
+        <div>
+          <span class="sc-stat-label">Progreso</span>
+          <span class="sc-stat-value">3 / 6 parejas</span>
+        </div>
+      </div>
+      <div class="sc-stat-divider" aria-hidden="true"></div>
+      <div class="sc-stat">
+        <span class="sc-stat-icon" aria-hidden="true">⭐</span>
+        <div>
+          <span class="sc-stat-label">Nivel</span>
+          <span class="sc-stat-value">Nivel suave</span>
+        </div>
+      </div>
+      <div class="sc-stat-divider" aria-hidden="true"></div>
+      <div class="sc-stat">
+        <span class="sc-stat-icon" aria-hidden="true">⏱️</span>
+        <div>
+          <span class="sc-stat-label">Tiempo</span>
+          <span class="sc-stat-value" aria-label="1 minuto 32 segundos">01:32</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablero del juego 4×3 -->
+    <div class="sc-game-grid" role="grid" aria-label="Tablero de memoria">
+
+      <!-- Fila 1 -->
+      <button class="sc-game-card sc-game-card--matched" aria-label="Flor, par encontrado" aria-pressed="true">🌸</button>
+      <button class="sc-game-card sc-game-card--hidden"  aria-label="Carta oculta"></button>
+      <button class="sc-game-card sc-game-card--matched" aria-label="Sol, par encontrado"  aria-pressed="true">☀️</button>
+      <button class="sc-game-card sc-game-card--hidden"  aria-label="Carta oculta"></button>
+
+      <!-- Fila 2 -->
+      <button class="sc-game-card sc-game-card--matched"  aria-label="Café, par encontrado" aria-pressed="true">☕</button>
+      <button class="sc-game-card sc-game-card--hidden"   aria-label="Carta oculta"></button>
+      <button class="sc-game-card"                        aria-label="Corazón, volteada">❤️</button>
+      <button class="sc-game-card sc-game-card--hidden"   aria-label="Carta oculta"></button>
+
+      <!-- Fila 3 -->
+      <button class="sc-game-card sc-game-card--matched"  aria-label="Flor, par encontrado" aria-pressed="true">🌸</button>
+      <button class="sc-game-card sc-game-card--matched"  aria-label="Sol, par encontrado"  aria-pressed="true">☀️</button>
+      <button class="sc-game-card sc-game-card--matched"  aria-label="Café, par encontrado" aria-pressed="true">☕</button>
+      <button class="sc-game-card sc-game-card--selected" aria-label="Taza de té, seleccionada">🍵</button>
+
+    </div>
+
+    <!-- Mensaje de logro -->
+    <div class="sc-game-toast" role="status" aria-live="polite">
+      <span class="sc-game-toast-icon" aria-hidden="true">😊</span>
+      <p>¡Muy bien! Llevas <strong>3 parejas</strong> encontradas.</p>
+    </div>
+
+    <!-- Acciones del juego -->
+    <div class="sc-game-actions" role="group" aria-label="Acciones del juego">
+      <button class="sc-game-action" type="button" aria-label="Usar una pista">
+        <span class="sc-game-action-icon" aria-hidden="true">🥈</span>
+        <span>Pista</span>
+        <span class="sc-game-action-hint">Te ayuda</span>
+      </button>
+      <button class="sc-game-action" type="button" aria-label="Pausar el juego">
+        <span class="sc-game-action-icon" aria-hidden="true">⏸</span>
+        <span>Pausar</span>
+        <span class="sc-game-action-hint">Toma tu tiempo</span>
+      </button>
+      <button class="sc-game-action sc-game-action--primary" type="button" aria-label="Continuar a la siguiente ronda">
+        <span class="sc-game-action-icon" aria-hidden="true">▶️</span>
+        <span>Continuar</span>
+        <span class="sc-game-action-hint">Siguiente ronda</span>
+      </button>
+    </div>
+
+    <!-- Beneficio del ejercicio -->
+    <div class="sc-game-benefit">
+      <span class="sc-game-benefit-icon" aria-hidden="true">🧠</span>
+      <div>
+        <strong>Beneficio del ejercicio</strong>
+        <p>Jugar a memoria ayuda a fortalecer la memoria, mejora la concentración y mantiene la mente activa de forma divertida.</p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

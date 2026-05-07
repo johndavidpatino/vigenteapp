@@ -1,0 +1,220 @@
+/* ============================================================
+   Juego cognitivo: Memoria activa — estilos de pantalla
+   ============================================================ */
+
+.sc-game-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-lg);
+}
+.sc-game-header .sc-logo      { gap: 10px; }
+.sc-game-header .sc-logo-name { font-size: 1.35rem; }
+
+/* ── Título del juego ── */
+.sc-game-title {
+  margin: 0 0 4px;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.sc-game-subtitle {
+  margin: 0 0 var(--sc-space-lg);
+  font-size: 0.9rem;
+  color: var(--sc-text-soft);
+}
+
+/* ── Estadísticas ── */
+.sc-game-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-white);
+  border: 1px solid var(--sc-border);
+  box-shadow: var(--sc-shadow-soft);
+  margin-bottom: var(--sc-space-lg);
+}
+
+.sc-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-xs);
+  flex: 1;
+}
+
+.sc-stat-icon { font-size: 1.1rem; }
+
+.sc-stat-label {
+  font-size: 0.7rem;
+  color: var(--sc-text-muted);
+  display: block;
+}
+
+.sc-stat-value {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  display: block;
+}
+
+.sc-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--sc-border);
+}
+
+/* ── Tablero del juego ── */
+.sc-game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sc-space-sm);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-game-card {
+  aspect-ratio: 1;
+  border-radius: var(--sc-radius-md);
+  border: 2px solid var(--sc-border);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  user-select: none;
+  background: var(--sc-white);
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-game-card:active { transform: scale(0.96); }
+
+/* Carta boca abajo */
+.sc-game-card--hidden {
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+  border-color: transparent;
+  color: transparent;
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.12) 0%, transparent 50%),
+    linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+}
+
+.sc-game-card--hidden::after {
+  content: "❤";
+  font-size: 1.2rem;
+  opacity: 0.25;
+  color: white;
+}
+
+/* Par encontrado */
+.sc-game-card--matched {
+  background: linear-gradient(135deg, var(--sc-mint), #d4f4ef);
+  border-color: var(--sc-teal);
+  box-shadow: 0 0 0 2px rgba(0,125,122,.2), var(--sc-shadow-soft);
+  opacity: 0.85;
+}
+
+/* Carta seleccionada/volteada */
+.sc-game-card--selected {
+  border-color: var(--sc-coral);
+  box-shadow: 0 0 0 3px rgba(242,107,85,.25), var(--sc-shadow-soft);
+}
+
+/* ── Mensaje de logro ── */
+.sc-game-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--sc-space-sm);
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-mint);
+  border: 1px solid var(--sc-border);
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-game-toast-icon { font-size: 1.4rem; }
+
+.sc-game-toast p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--sc-teal-dark);
+  font-weight: 700;
+}
+
+/* ── Barra de acciones inferior ── */
+.sc-game-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--sc-space-sm);
+  margin-bottom: var(--sc-space-lg);
+}
+
+.sc-game-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--sc-space-md) var(--sc-space-sm);
+  border-radius: var(--sc-radius-md);
+  border: 1.5px solid var(--sc-border-strong);
+  background: var(--sc-white);
+  color: var(--sc-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-game-action-icon { font-size: 1.3rem; }
+.sc-game-action-hint { font-size: 0.65rem; color: var(--sc-text-muted); font-weight: 400; }
+
+.sc-game-action--primary {
+  background: linear-gradient(135deg, var(--sc-teal), var(--sc-teal-dark));
+  border-color: transparent;
+  color: var(--sc-white);
+}
+
+.sc-game-action--primary .sc-game-action-hint { color: rgba(255,255,255,.75); }
+
+/* ── Beneficio del ejercicio ── */
+.sc-game-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-md);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-white);
+  border: 1px solid var(--sc-border);
+  box-shadow: var(--sc-shadow-soft);
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-game-benefit-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+.sc-game-benefit strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--sc-navy);
+  margin-bottom: 4px;
+}
+
+.sc-game-benefit p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}

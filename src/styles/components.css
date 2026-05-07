@@ -251,6 +251,67 @@
   line-height: 1;
 }
 
+/* ── Botón pequeño (uso inline en tarjetas) ── */
+.sc-button-sm {
+  min-height: 40px;
+  padding: 0 var(--sc-space-md);
+  font-size: 0.92rem;
+}
+
+/* ── Avatar de perfil en header ── */
+.sc-profile-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: var(--sc-touch);
+  text-decoration: none;
+  color: var(--sc-navy);
+}
+
+.sc-profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-mint);
+  border: 2px solid var(--sc-border);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+.sc-profile-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--sc-text-muted);
+}
+
+/* ── Grid de funciones: variante 3 columnas ── */
+.sc-feature-grid--3col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sc-feature-grid--3col .sc-feature-card {
+  min-height: 130px;
+  gap: var(--sc-space-xs);
+}
+
+.sc-feature-grid--3col .sc-feature-icon {
+  width: 46px;
+  height: 46px;
+  font-size: 1.55rem;
+}
+
+.sc-feature-grid--3col .sc-feature-card strong {
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.sc-feature-grid--3col .sc-feature-card small {
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
 .sc-agent-list {
   display: grid;
   gap: var(--sc-space-md);

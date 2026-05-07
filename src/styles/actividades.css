@@ -1,0 +1,236 @@
+/* ============================================================
+   Actividades y estimulación cognitiva — estilos de pantalla
+   ============================================================ */
+
+.sc-act-page {
+  width: min(100%, var(--sc-content-max));
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: var(--sc-space-lg) var(--sc-space-md) 0;
+  background: var(--sc-cream);
+}
+
+/* ── Header (compartido) ── */
+.sc-act-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-lg);
+}
+
+.sc-act-header .sc-logo { gap: 10px; }
+.sc-act-header .sc-logo-name { font-size: 1.35rem; }
+
+/* ── Hero: título + imagen decorativa ── */
+.sc-act-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: var(--sc-space-md);
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-act-hero-text h1 {
+  margin: 0 0 var(--sc-space-xs);
+  font-size: clamp(1.7rem, 7vw, 2.2rem);
+  font-weight: 850;
+  color: var(--sc-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.sc-act-hero-text p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--sc-text-soft);
+  line-height: 1.4;
+}
+
+/* Foto decorativa (esquina superior derecha) */
+.sc-act-hero-photo {
+  width: 88px;
+  height: 100px;
+  border-radius: var(--sc-radius-md);
+  background: linear-gradient(155deg, #c8a888 0%, #a07848 55%, #7a5028 100%);
+  flex-shrink: 0;
+  /* reemplazar con <img src="./assets/adulta-mayor.jpg" alt=""> */
+}
+
+/* ── Encabezado de sección ── */
+.sc-act-section {
+  margin-bottom: var(--sc-space-xl);
+}
+
+.sc-act-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sc-space-md);
+}
+
+.sc-act-section-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+}
+
+.sc-ver-todos {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--sc-teal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── Grid de 4 juegos cognitivos ── */
+.sc-mini-game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sc-space-sm);
+}
+
+.sc-mini-game-card {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-white);
+  padding: var(--sc-space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-mini-game-card:hover {
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-mini-game-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.sc-mini-game-name {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.2;
+}
+
+.sc-mini-game-desc {
+  font-size: 0.68rem;
+  color: var(--sc-text-soft);
+  line-height: 1.3;
+  flex: 1;
+}
+
+.sc-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sc-progress-bar {
+  height: 5px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-mint);
+  overflow: hidden;
+}
+
+.sc-progress-fill {
+  height: 100%;
+  border-radius: var(--sc-radius-pill);
+  background: linear-gradient(90deg, var(--sc-teal), var(--sc-teal-dark));
+}
+
+.sc-progress-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--sc-teal-dark);
+}
+
+/* ── Tarjeta promocional "Desafía tu mente" ── */
+.sc-promo-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--sc-space-md);
+  padding: var(--sc-space-lg);
+  border-radius: var(--sc-radius-lg);
+  background: linear-gradient(135deg, var(--sc-teal-dark), #004d50);
+  color: var(--sc-white);
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-promo-card p {
+  margin: 0 0 var(--sc-space-md);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  opacity: 0.92;
+}
+
+.sc-promo-card .sc-button-primary {
+  background: var(--sc-white);
+  color: var(--sc-teal-dark);
+  font-size: 0.88rem;
+  min-height: 42px;
+  padding: 0 var(--sc-space-md);
+}
+
+.sc-promo-illustration {
+  font-size: 3rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* ── Grid de talleres (3 columnas compactas) ── */
+.sc-workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sc-space-sm);
+}
+
+.sc-workshop-card {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  background: var(--sc-white);
+  padding: var(--sc-space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: var(--sc-shadow-soft);
+  cursor: pointer;
+}
+
+.sc-workshop-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.sc-workshop-name {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--sc-navy);
+  line-height: 1.2;
+}
+
+.sc-workshop-date {
+  font-size: 0.65rem;
+  color: var(--sc-text-soft);
+  line-height: 1.3;
+  flex: 1;
+}
+
+.sc-workshop-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--sc-radius-pill);
+  background: var(--sc-mint);
+  color: var(--sc-teal-dark);
+  font-size: 0.62rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
