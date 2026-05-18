@@ -1,5 +1,306 @@
 @import url("./base.css");
 
+.sc-login-shell {
+  display: grid;
+  gap: var(--sc-space-xl);
+  align-content: start;
+}
+
+.sc-login-brand-block {
+  display: flex;
+  justify-content: center;
+}
+
+.sc-login-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.sc-brand-mark {
+  position: relative;
+  width: 96px;
+  height: 86px;
+  flex: 0 0 auto;
+}
+
+.sc-brand-figure {
+  position: absolute;
+  bottom: 0;
+  width: 44px;
+  height: 62px;
+  border-radius: 30px 30px 26px 26px;
+}
+
+.sc-brand-figure::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.sc-brand-figure::after {
+  content: "";
+  position: absolute;
+  inset: 10px 6px 0;
+  border-radius: 30px 30px 26px 26px;
+  background: var(--sc-cream);
+}
+
+.sc-brand-figure-teal {
+  left: 6px;
+  color: var(--sc-teal);
+  background: currentColor;
+  transform: rotate(24deg);
+}
+
+.sc-brand-figure-coral {
+  right: 8px;
+  width: 38px;
+  height: 56px;
+  color: var(--sc-coral);
+  background: currentColor;
+  transform: rotate(-26deg);
+}
+
+.sc-brand-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.sc-brand-title {
+  color: var(--sc-navy);
+  font-size: clamp(2.35rem, 5.8vw, 4.3rem);
+  line-height: 0.92;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.sc-brand-tagline {
+  margin: 0;
+  color: var(--sc-teal);
+  font-size: clamp(1rem, 2.4vw, 1.55rem);
+  line-height: 1.15;
+}
+
+.sc-brand-tagline span {
+  color: var(--sc-coral);
+}
+
+.sc-login-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(250px, 1.08fr);
+  gap: var(--sc-space-lg);
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.35rem);
+  border: 0;
+  border-radius: 42px;
+  background:
+    linear-gradient(120deg, rgba(255, 249, 239, 0.98), rgba(255, 249, 239, 0.9) 34%, rgba(255, 241, 230, 0.65) 100%);
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-login-hero-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+  gap: var(--sc-space-md);
+  padding: 18px 0 124px;
+}
+
+.sc-login-title {
+  margin: 0;
+  color: var(--sc-teal);
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  font-weight: 900;
+}
+
+.sc-login-lead {
+  max-width: 10ch;
+  margin: 0;
+  color: var(--sc-navy);
+  font-size: clamp(1.7rem, 3.1vw, 2.3rem);
+  line-height: 1.15;
+}
+
+.sc-login-heart {
+  color: var(--sc-coral);
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.sc-login-hero-media {
+  position: relative;
+  min-height: 520px;
+  border-radius: 34px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 241, 230, 0.66), rgba(234, 247, 244, 0.58));
+}
+
+.sc-login-portrait-scene {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sc-login-message {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  left: 28px;
+  z-index: 2;
+  min-height: 104px;
+  padding: 18px 22px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--sc-white);
+  background: rgba(11, 53, 88, 0.84);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--sc-shadow-soft);
+}
+
+.sc-login-message p {
+  margin: 0;
+  font-size: clamp(1.12rem, 2.8vw, 1.7rem);
+  line-height: 1.28;
+}
+
+.sc-login-message-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--sc-teal);
+  background: var(--sc-white);
+}
+
+.sc-login-message-icon svg,
+.sc-button-icon,
+.sc-login-help-icon svg,
+.sc-login-trust-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.sc-login-actions {
+  display: grid;
+  gap: var(--sc-space-md);
+}
+
+.sc-login-button-main,
+.sc-login-button-secondary {
+  width: 100%;
+  min-height: 96px;
+  border-radius: 999px;
+  justify-content: center;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.sc-login-button-main {
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-login-button-secondary {
+  border-color: rgba(10, 80, 90, 0.1);
+}
+
+.sc-button-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.sc-login-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  color: var(--sc-text-soft);
+}
+
+.sc-login-divider span {
+  height: 1px;
+  background: var(--sc-border-strong);
+}
+
+.sc-login-divider strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sc-login-help {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: var(--sc-touch);
+  color: var(--sc-teal);
+  font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.sc-login-help-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: var(--sc-teal);
+}
+
+.sc-login-trust {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--sc-space-lg);
+  padding: 26px 28px;
+  border-radius: 34px;
+  box-shadow: none;
+}
+
+.sc-login-trust-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--sc-teal);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.sc-login-trust-copy h2 {
+  margin: 0 0 8px;
+  color: var(--sc-navy);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.sc-login-trust-copy p {
+  margin: 0;
+  color: var(--sc-text);
+  font-size: clamp(1.02rem, 2.4vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.sc-login-trust-copy span {
+  color: var(--sc-coral);
+}
+
 .sc-header {
   display: flex;
   align-items: center;
@@ -376,5 +677,158 @@
   .sc-agent-card .sc-check {
     grid-column: 2;
     justify-self: end;
+  }
+}
+
+@media (max-width: 760px) {
+  .sc-login-brand {
+    gap: 14px;
+  }
+
+  .sc-brand-mark {
+    width: 74px;
+    height: 68px;
+  }
+
+  .sc-brand-figure {
+    width: 35px;
+    height: 50px;
+  }
+
+  .sc-brand-figure::before {
+    width: 18px;
+    height: 18px;
+    top: -20px;
+    left: 8px;
+  }
+
+  .sc-brand-figure-coral {
+    width: 30px;
+    height: 46px;
+  }
+
+  .sc-login-hero {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .sc-login-hero-copy {
+    padding: 0;
+  }
+
+  .sc-login-lead {
+    max-width: 12ch;
+  }
+
+  .sc-login-hero-media {
+    min-height: 420px;
+  }
+
+  .sc-login-message {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    min-height: 92px;
+    padding: 16px 18px;
+  }
+
+  .sc-login-message-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .sc-login-button-main,
+  .sc-login-button-secondary {
+    min-height: 84px;
+  }
+
+  .sc-login-trust {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .sc-login-shell {
+    gap: var(--sc-space-lg);
+  }
+
+  .sc-login-brand-block {
+    justify-content: start;
+  }
+
+  .sc-login-brand {
+    gap: 12px;
+  }
+
+  .sc-brand-title {
+    font-size: 2.95rem;
+  }
+
+  .sc-brand-tagline {
+    font-size: 1.15rem;
+  }
+
+  .sc-login-hero {
+    border-radius: 32px;
+  }
+
+  .sc-login-title {
+    font-size: 3.4rem;
+  }
+
+  .sc-login-lead {
+    font-size: 1.28rem;
+    max-width: 11ch;
+  }
+
+  .sc-login-heart {
+    font-size: 2rem;
+  }
+
+  .sc-login-hero-media {
+    min-height: 320px;
+    border-radius: 28px;
+  }
+
+  .sc-login-message {
+    gap: 12px;
+    border-radius: 24px;
+  }
+
+  .sc-login-message p {
+    font-size: 1rem;
+  }
+
+  .sc-login-message-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .sc-login-message-icon svg,
+  .sc-button-icon,
+  .sc-login-help-icon svg,
+  .sc-login-trust-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sc-login-button-main,
+  .sc-login-button-secondary {
+    min-height: 72px;
+    font-size: 1.2rem;
+  }
+
+  .sc-login-help {
+    font-size: 1.2rem;
+  }
+
+  .sc-login-trust {
+    padding: 22px;
+  }
+
+  .sc-login-trust-icon {
+    width: 72px;
+    height: 72px;
   }
 }
